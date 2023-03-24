@@ -2,15 +2,8 @@
 # Join @codeblocklabs on telegram
 #
 
-echo -e "\033[0;31m";
-echo "  _____          _      ____  _            _    _           _                              ";
-echo " / ____|        | |    |  _ \| |          | |  | |         | |                             ";
-echo "| |     ___   __| | ___| |_) | | ___   ___| | _| |     __ _| |__  ___   ___ ___  _ __ ___  ";
-echo "| |    / _ \ / _` |/ _ \  _ <| |/ _ \ / __| |/ / |    / _` | '_ \/ __| / __/ _ \| '_ ` _ \ ";
-echo "| |___| (_) | (_| |  __/ |_) | | (_) | (__|   <| |___| (_| | |_) \__ \| (_| (_) | | | | | |";
-echo " \_____\___/ \__,_|\___|____/|_|\___/ \___|_|\_\______\__,_|_.__/|___(_)___\___/|_| |_| |_|";
-echo "             Auto Installer arkh For arkhadian v2.0.0            ";
-echo -e "\e[0m";
+
+echo "             CodeBlockLabs.com Auto Installer arkh For arkhadian v1.0.0            ";
 sleep 1
 
 # Variable
@@ -35,7 +28,7 @@ source $HOME/.bash_profile
 
 # Set Vars
 if [ ! $ARKH_NODENAME ]; then
-        read -p "sxlzptprjkt@w00t666w00t:~# [ENTER YOUR NODE] > " ARKH_NODENAME
+        read -p "## CodeBlockLabs ## [ENTER YOUR NODE] > " ARKH_NODENAME
         echo 'export ARKH_NODENAME='$ARKH_NODENAME >> $HOME/.bash_profile
 fi
 echo ""
@@ -109,7 +102,7 @@ sed -i -e "s/^snapshot-keep-recent *=.*/snapshot-keep-recent = \"5\"/" $HOME/$AR
 # Enable state sync
 $ARKH unsafe-reset-all --home $HOME/$ARKH_FOLDER
 
-SNAP_RPC="https://rpc-arkh.sxlzptprjkt.xyz:443"
+SNAP_RPC="https://rpc.arkh.nodestake.top:443"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
@@ -153,14 +146,4 @@ echo -e "CHECK LOCAL STATUS : \e[1m\e[31mcurl -s localhost:${ARKH_PORT}657/statu
 echo -e "DOCS : https://docs.codeblocklabs.com"
 echo ""
 
-# End
-Pipped by
-Total Received
-$0
-Be the first to PIP
-Event
-Log 내용
 
-Log 내용
-
-Log 내용
